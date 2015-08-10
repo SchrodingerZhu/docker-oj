@@ -39,10 +39,6 @@ RUN \
 # Add files.
 ADD root/supervisord.conf /etc/supervisord.conf
 
-RUN \
-  cd $GOPATH/src/GoOnlineJudge && \
-  git checkout rex
-
 # Build OJ
 RUN \
   cd $GOPATH/src/restweb && \
