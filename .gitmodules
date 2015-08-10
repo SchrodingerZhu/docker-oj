@@ -7,6 +7,3 @@
 [submodule "restweb"]
 	path = restweb
 	url = https://github.com/sakeven/restweb.git
-[submodule "GoOnlineJudge"]
-	path = GoOnlineJudge
-	url = https://github.com/ZJGSU-Open-Source/GoOnlineJudge.git

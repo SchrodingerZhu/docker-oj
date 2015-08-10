@@ -39,6 +39,12 @@ RUN \
 # Add files.
 ADD root/supervisord.conf /etc/supervisord.conf
 
+RUN \
+  cd $GOPATH/src && \
+  git clone git@github.com:ZJGSU-Open-Source/goOnlineJudge.git && \
+  cd GoOnlineJudge && \
+  git checkout rex
+
 # Build OJ
 RUN \
   cd $GOPATH/src/restweb && \
@@ -55,8 +61,6 @@ EXPOSE 8080
 # Define working directory.
 WORKDIR $GOPATH/src
 
-RUN \
-  ls GoOnlineJudge
-
 # Define default command.
 CMD ["/usr/bin/supervisord","-c","/etc/supervisord.conf"]
+
