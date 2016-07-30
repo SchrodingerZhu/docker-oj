@@ -48,7 +48,7 @@ ADD root/supervisord.conf /etc/supervisord.conf
 
 # Build OJ
 RUN \
-  cd $GOPATH/src/restweb && \
+  mkdir $GOPATH/src/restweb && \
   cd restweb && \
   go install && \
   cd $GOPATH/src && \
